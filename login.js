@@ -1,8 +1,8 @@
-const mysql = require("mysql2");
+//const mysql = require("mysql2");
 const mysql = require("mysql");
 const express = require("express");
 const bodyParser = require("body-parser");
-const encoder = bodyParser.urlencoded();
+const encoder = bodyParser.urlencoded({extended:true});
 
 const app = express();
 app.use("/public/assets",express.static("assets"));
@@ -10,7 +10,7 @@ app.use(express.static("public"));
 const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "@Blackfox11",
+    password: "Patel@123",
 //     enter your mysql password
     database: "nodejs"
 });
